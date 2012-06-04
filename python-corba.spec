@@ -1,12 +1,11 @@
 Summary:	Python bindings for CORBA
 Name:		python-corba
 Version:	1.2.0
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 URL:		http://mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/1.2/%{name}-%{version}.tar.xz
-#Patch0:		pyorbit-2.24.0-linkage.patch
 
 BuildRequires:	mate-common
 BuildRequires:	pkgconfig(glib-2.0)
@@ -14,7 +13,7 @@ BuildRequires:	pkgconfig(libIDL-2.0)
 BuildRequires:	pkgconfig(MateCORBA-2.0)
 BuildRequires:	pkgconfig(python)
 
-Requires:	CORBA
+Requires:	mate-corba
 
 %description
 pyorbit is an extension module for python that gives you access
@@ -31,7 +30,7 @@ libraries so that they interoperate with pyorbit
 
 %prep
 %setup -q
-#patch0 -p0
+%apply_patches
 
 %build
 NOCONFIGURE=yes ./autogen.sh
