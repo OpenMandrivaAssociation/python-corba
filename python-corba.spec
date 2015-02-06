@@ -1,7 +1,7 @@
 Summary:	Python bindings for CORBA
 Name:		python-corba
 Version:	1.4.0
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 URL:		http://mate-desktop.org
